@@ -70,6 +70,11 @@ p {
     -khtml-box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
 }
 
+* {
+    /* Remove blue highlight of button on mobile */
+    -webkit-tap-highlight-color: transparent;
+}
+
 
 /* Only on mobile //////////////////////////////*/
 
