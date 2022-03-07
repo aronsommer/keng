@@ -107,6 +107,15 @@
             <img src="images/photography/20.png" alt="" width="650" height="auto"><br>
             <img src="images/photography/21.png" alt="" width="650" height="auto"><br>
         </div>
+        <!-- About -->
+        <div id="overlay5" class="overlay" onclick="off()">
+            <br>
+            <h1>About</h1><br>
+            <p>MA in Arts and Design Education, 2022</p>
+            <p>BA in Arts and Design Education, 2019</p>
+            <p>BA in Fine Arts, 2017</p>
+            <p>HGK FHNW</p>
+        </div>
 
         <!-- Main Content ------------------------------------------>
 
@@ -127,10 +136,9 @@
                 <h1>Photography</h1>
             </button><br>
             <hr style="width:50%; text-align:center; border:none; border-top:1px black solid; height: 1px;">
-            <p>MA in Arts and Design Education, 2022</p>
-            <p>BA in Arts and Design Education, 2019</p>
-            <p>BA in Fine Arts, 2017</p>
-            <p>HGK FHNW</p>
+            <button class="astext" onclick="on5()">
+                <h1>About</h1>
+            </button><br>
             <hr style="width:50%; text-align:center; border:none; border-top:1px black solid; height: 1px;">
             <p>kaja.eng@hotmail.com</p>
         </div>
@@ -181,12 +189,18 @@
             document.getElementById("overlay4").style.display = "block";
             document.getElementById("overlay4").scrollTop = 0;
         }
+        // Show About
+        function on5() {
+            document.getElementById("overlay5").style.display = "block";
+            document.getElementById("overlay5").scrollTop = 0;
+        }
         // Hide All
         function off() {
             document.getElementById("overlay1").style.display = "none";
             document.getElementById("overlay2").style.display = "none";
             document.getElementById("overlay3").style.display = "none";
             document.getElementById("overlay4").style.display = "none";
+            document.getElementById("overlay5").style.display = "none";
             // Change Background Color
             changeBGcolor();
         }
