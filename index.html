@@ -167,11 +167,14 @@
         }
         // Show Carpets
         function on1() {
+            switchToCloseCursor();
             document.getElementById("overlay1").style.display = "block";
             document.getElementById("overlay1").scrollTop = 0;
+
         }
         // Show Drawings
         function on2() {
+            switchToCloseCursor();
             document.getElementById("overlay2").style.display = "block";
             document.getElementById("overlay2").scrollTop = 0;
             // Choose random background color
@@ -181,21 +184,26 @@
         }
         // Show Paintings
         function on3() {
+            switchToCloseCursor();
             document.getElementById("overlay3").style.display = "block";
             document.getElementById("overlay3").scrollTop = 0;
         }
         // Show Photography
         function on4() {
+            switchToCloseCursor();
             document.getElementById("overlay4").style.display = "block";
             document.getElementById("overlay4").scrollTop = 0;
         }
         // Show About
         function on5() {
+            switchToCloseCursor();
             document.getElementById("overlay5").style.display = "block";
             document.getElementById("overlay5").scrollTop = 0;
         }
         // Hide All
         function off() {
+            // Switch cursor back to default
+            document.body.style.cursor = "default";
             document.getElementById("overlay1").style.display = "none";
             document.getElementById("overlay2").style.display = "none";
             document.getElementById("overlay3").style.display = "none";
@@ -203,6 +211,11 @@
             document.getElementById("overlay5").style.display = "none";
             // Change Background Color
             changeBGcolor();
+        }
+        // Switch cursor to close style
+        function switchToCloseCursor() {
+            // document.body.style.cursor = "url('images/cursor/cursor-close.png')32 0, pointer";
+            document.body.style.cursor = "zoom-out";
         }
     </script>
 
