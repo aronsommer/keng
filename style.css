@@ -99,8 +99,13 @@ p {
         /* width: 50%;
         height: auto; */
     }
+    /* Images width 50% in About section*/
     #overlay5 img {
         width: 50%;
         height: auto;
+    }
+    /* Adjust font size in About section*/
+    #overlay5 p {
+        font-size: 3.5vw;
     }
 }
