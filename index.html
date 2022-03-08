@@ -107,6 +107,33 @@
             <img src="images/photography/20.png" alt="" width="650" height="auto"><br>
             <img src="images/photography/21.png" alt="" width="650" height="auto"><br>
         </div>
+        <!-- About -->
+        <div id="overlay5" class="overlay" onclick="off()">
+            <br>
+            <h1>About</h1><br>
+            <img src="images/portrait/portrait.png" alt="" width="200" height="auto"><br>
+            <!-- Text -->
+            <p>
+                Recently I discovered the technique of tufting,<br>so my world is now full of carpets in all shapes,
+                <br>colors and sizes. I also like to draw and paint<br>or experiment with photography.<br><br>In my work as an art and design teacher<br>I love to pass on my knowledge and experience<br>on how to see and cope with the world to others.<br><br>It's
+                the interaction about art and design<br>that makes everything more interesting to me :)
+            </p>
+            <hr style="width:50%; text-align:center; border:none; border-top:1px black solid; height: 1px;">
+            <!-- Education -->
+            <p>
+                Education<br><br>MA in Arts and Design Education, 2022<br> BA in Arts and Design Education, 2019<br> BA in Fine Arts, 2017
+                <br> HGK FHNW
+            </p>
+            <hr style="width:50%; text-align:center; border:none; border-top:1px black solid; height: 1px;">
+            <!-- Exhibitions -->
+            <p>
+                Exhibitions<br><br>2019/06<br>Alles – Nichts – Dazwischen, Group Exhibition, Zuckersilo, Pratteln
+                <br><br>2017/08 – 2017/09<br>We invite you to hope, Group Exhibition, Kunsthaus Baselland, Muttenz
+                <br><br>2016/09<br>Jahresausstellung, der Tank, Münchenstein<br><br>2016/04 – 2016/05
+                <br>Frühlingsausstellung mit René Keusch, Nabholzareal, Schönenwerd
+                <br><br>2015/08<br>Loose Thinking, Group Exhibition, Kunsthaus Baselland, Muttenz
+            </p>
+        </div>
 
         <!-- Main Content ------------------------------------------>
 
@@ -127,12 +154,16 @@
                 <h1>Photography</h1>
             </button><br>
             <hr style="width:50%; text-align:center; border:none; border-top:1px black solid; height: 1px;">
-            <p>MA in Arts and Design Education, 2022</p>
-            <p>BA in Arts and Design Education, 2019</p>
-            <p>BA in Fine Arts, 2017</p>
-            <p>HGK FHNW</p>
+            <button class="astext" onclick="on5()">
+                <h1>About</h1>
+            </button><br>
             <hr style="width:50%; text-align:center; border:none; border-top:1px black solid; height: 1px;">
             <p>kaja.eng@hotmail.com</p>
+            <p>Copyright ©
+                <script>
+                    document.write(new Date().getFullYear())
+                </script> Kaja Eng
+            </p>
         </div>
     </div>
 
@@ -159,11 +190,14 @@
         }
         // Show Carpets
         function on1() {
+            switchToCloseCursor();
             document.getElementById("overlay1").style.display = "block";
             document.getElementById("overlay1").scrollTop = 0;
+
         }
         // Show Drawings
         function on2() {
+            switchToCloseCursor();
             document.getElementById("overlay2").style.display = "block";
             document.getElementById("overlay2").scrollTop = 0;
             // Choose random background color
@@ -173,22 +207,39 @@
         }
         // Show Paintings
         function on3() {
+            switchToCloseCursor();
             document.getElementById("overlay3").style.display = "block";
             document.getElementById("overlay3").scrollTop = 0;
         }
         // Show Photography
         function on4() {
+            switchToCloseCursor();
             document.getElementById("overlay4").style.display = "block";
             document.getElementById("overlay4").scrollTop = 0;
         }
+        // Show About
+        function on5() {
+            switchToCloseCursor();
+            document.getElementById("overlay5").style.display = "block";
+            document.getElementById("overlay5").scrollTop = 0;
+        }
         // Hide All
         function off() {
+            // Switch cursor back to default
+            document.body.style.cursor = "default";
             document.getElementById("overlay1").style.display = "none";
             document.getElementById("overlay2").style.display = "none";
             document.getElementById("overlay3").style.display = "none";
             document.getElementById("overlay4").style.display = "none";
+            document.getElementById("overlay5").style.display = "none";
             // Change Background Color
             changeBGcolor();
+        }
+        // Switch cursor to close style
+        function switchToCloseCursor() {
+            //document.body.style.cursor = "url('images/cursor/cursor-close.png')32 0, pointer";
+            document.body.style.cursor = "url('images/cursor/cursor-cross-black.png')16 0, pointer";
+            //document.body.style.cursor = "zoom-out";
         }
     </script>
 

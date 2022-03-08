@@ -53,7 +53,8 @@ p {
     bottom: 0;
     background-color: white;
     z-index: 2;
-    cursor: pointer;
+    /* cursor: pointer; */
+    /* cursor: url('images/cursor/cursor-close.png')32 0, pointer; */
     text-align: center;
     overflow-y: scroll;
 }
@@ -68,6 +69,11 @@ p {
     -moz-box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
     -webkit-box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
     -khtml-box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
+}
+
+* {
+    /* Remove blue highlight of button on mobile */
+    -webkit-tap-highlight-color: transparent;
 }
 
 
@@ -92,5 +98,14 @@ p {
         -khtml-box-shadow: none;
         /* width: 50%;
         height: auto; */
+    }
+    /* Images width 50% in About section*/
+    #overlay5 img {
+        width: 50%;
+        height: auto;
+    }
+    /* Adjust font size in About section*/
+    #overlay5 p {
+        font-size: 3.5vw;
     }
 }
